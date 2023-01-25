@@ -1,0 +1,38 @@
+<app-header></app-header>
+<div class="container">
+  <h1 class="text-dark mt-5 text-center">REGISTERATION FORM</h1>
+<div class="row mt-5">
+  
+   <div class="col-6 p-4"><span class="pg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae inventore maiores nobis voluptate omnis delectus, laborum, provident explicabo repellendus veniam minima, praesentium ipsam! Tempore, cum. In quibusdam et laudantium totam.
+    Nemo voluptate molestias hic facilis unde asperiores soluta id ducimus? Mollitia, voluptatum. Explicabo porro id aspernatur veritatis. Officia labore ea velit eveniet cum earum porro, voluptatem magni, recusandae dicta possimus?
+    Repellendus consequatur perferendis voluptatum tempora voluptate consectetur voluptatibus dolor facere dignissimos repellat? Aliquam impedit sequi voluptate eveniet enim, animi hic maxime eos! Itaque, cumque odit corrupti ab quibusdam accusantium laudantium.
+    Sed omnis eligendi cum, deleniti optio quis. Dolore impedit eveniet beatae omnis asperiores, eius consequatur vitae. Tempora molestias accusantium illum mollitia, nam debitis expedita incidunt veniam cupiditate esse explicabo animi.</span></div>
+  <div id="register" class="col-6 p-4">
+        <form (ngSubmit)="registor()" [formGroup]="RegisterForm">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label text-light">Username</label>
+            <input name="uname" formControlName="uname" type="text"  autocomplete="off" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div *ngIf="this.RegisterForm.get('uname')?.errors&&this.RegisterForm.get('uname')?.touched" class="text-danger mb-2" >Invalid Username</div>
+
+          </div>
+
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Account Number</label>
+              <input name="acn" formControlName="acno" type="text"  autocomplete="off" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div *ngIf="this.RegisterForm.get('acno')?.errors&&this.RegisterForm.get('acno')?.touched" class="text-danger mb-2" >Invalid Account Number</div>
+
+            </div>
+          
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input name="pass" formControlName="pswd" type="password" class="form-control" id="exampleInputPassword1">
+                <div *ngIf="this.RegisterForm.get('pswd')?.errors&&this.RegisterForm.get('pswd')?.touched" class="text-danger mb-2" >Invalid Account Number</div>
+
+              </div>
+              
+            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-pen"></i> Register</button><p>Already a user? click <a routerLink="/"> here</a> to Login</p>
+          </form>
+    </div>
+</div>
+
+</div>

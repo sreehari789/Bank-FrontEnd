@@ -1,0 +1,122 @@
+
+
+#n1{
+  background-color: #8BC6EC;
+  background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);background-color: #21D4FD;
+  background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+  box-shadow: -1px 10px 14px -2px rgba(242,228,228,0.75);
+  -webkit-box-shadow: -1px 10px 14px -2px rgba(242,228,228,0.75);
+  -moz-box-shadow: -1px 10px 14px -2px rgba(242,228,228,0.75);
+  height: 11vh;
+
+}
+
+.navbar-brand{
+    font-family: 'Libre Baskerville', serif;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 1.5em;
+    color: white;
+}
+.navbar-nav li{
+    margin-left: 30px;
+    font-weight: 400;
+    font-size: 20px;
+    
+}
+.aTag{
+  display: flex;
+}
+.aTag a{
+  margin-left: 4rem; 
+  margin-right: 4rem;
+}
+
+#image{
+    width: fit-content;
+    height: 20px;
+    margin-left: 50px;
+    box-shadow: 1px -2px 35px -2px rgba(0,0,0,0.75);
+-webkit-box-shadow: 1px -2px 35px -2px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px -2px 35px -2px rgba(0,0,0,0.75);
+}
+
+/* hover */
+
+.navbar-nav a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+   
+  }   
+  .navbar-nav a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .navbar-nav a:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+  /* ................... */
+
+  #button{
+    background-color: #2b08aa;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+  .userName{
+    color: #eae7f4;
+    font-size: 22px;
+  }
+  
+ 
+/* ...................... */
+  #DepositNav{
+    background-color: #8BC6EC;
+background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);background-color: #21D4FD;
+background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+  }
+  #BalaceNav{
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);background-color: #21D4FD;
+    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+  }
+  #mainNav{
+
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);background-color: #21D4FD;
+    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+  }
+#offcanvasNavbar, #offcanvasExample,#offcanvasDeposit {
+  background-color: #221974;
+}
+@media (max-width:1070px){
+  .aTag{
+    display: none;
+  }
+}
+
+/* loading gif */
+.loader{
+  object-fit: cover;
+  
+}
+.logimg{
+ height: 300px;
+margin-left: 35%;
+margin-top: 10%;
+}
+

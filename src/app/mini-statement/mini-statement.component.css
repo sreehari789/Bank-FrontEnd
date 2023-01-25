@@ -1,0 +1,79 @@
+#n1{
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);background-color: #21D4FD;
+    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+    box-shadow: -1px 10px 14px -2px rgba(242,228,228,0.75);
+    -webkit-box-shadow: -1px 10px 14px -2px rgba(242,228,228,0.75);
+    -moz-box-shadow: -1px 10px 14px -2px rgba(242,228,228,0.75);
+    height: 11vh;
+  
+  }
+  
+  .navbar-brand{
+      font-family: 'Libre Baskerville', serif;
+      letter-spacing: 2px;
+      font-weight: 400;
+      color: white;
+      font-size: 1.5em;
+
+  }
+  .navbar-nav li{
+    margin-left: 30px;
+    font-weight: 400;
+    font-size: 20px;
+    
+}
+.userButton{
+
+ background-color: #2b08aa;
+ border-radius: 7px;
+ box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  .userName{
+    color: #eae7f4;
+    font-size: 22px;
+  }
+
+.statement{
+    text-align: center;
+}
+.statement h1{
+    margin-top: 4vh;
+}
+.statementTable{
+    border: solid;
+    background-color: #fbe9dd;
+    
+width: 100%;
+}
+.statementTable button{
+    background-color: #1f6a46;
+    width: 7rem;
+    height: 2rem;
+   border: none;
+   font-weight: 600;
+  border-radius: 10px;
+  margin-left: 1rem;
+}
+.export{
+    padding: 2rem;
+}
+.tablediv{
+    margin: 2rem;
+}
+table{
+    background-color: rgb(186, 201, 201);
+}
+table tr{
+    color: rgb(32, 6, 67);
+}
+
+thead tr th{
+    border: solid;
+}
+tbody{
+border: solid;
+}
+tbody tr th{
+    border: solid;
+}

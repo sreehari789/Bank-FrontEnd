@@ -1,0 +1,15 @@
+.buttons button{
+    width: 9rem;
+    height: 3rem;
+   margin: 1rem; 
+   padding: 1rem,2rem,1rem;
+   border: none;
+   font-weight: 600;
+  font-weight: 700;
+  box-shadow: rgba(226, 232, 237, 0.3) 0px 1px 2px 0px, rgba(30, 153, 247, 0.15) 0px 1px 3px 1px;
+  border-radius: 10px;
+}
+.container{
+    text-align: center;
+    margin-top: 10vh;
+}

@@ -1,0 +1,120 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+.page1{
+    width: 100%;
+    height: 80vh;
+    /* background-color: #fbe9dd; */
+    background-color: #9bc4e0;
+    display: flex;
+}
+.welcome{
+    width: 45vw;
+        height: 60vh;
+        margin-left: 2rem;
+        margin-top: 4rem; 
+}
+.welcome h1{
+    font-size: 4rem;
+    /* color: rgb(250, 202, 163); */
+    color: #0d4e7a ;
+    font-weight: 700;
+    letter-spacing: 1rem;
+    
+}
+    .img1{
+        width: 45vw;
+        height: 60vh;
+        margin-left: 2rem;
+        margin-top: 4rem;
+        object-fit: cover;
+    }
+.buttons{
+    margin-top: 10vh;
+}
+.buttons button{
+    width: 9rem;
+    height: 3rem;
+   margin: 1rem; 
+   padding: 1rem,2rem,1rem;
+   border: none;
+   font-weight: 600;
+  font-weight: 700;
+  box-shadow: rgba(226, 232, 237, 0.3) 0px 1px 2px 0px, rgba(30, 153, 247, 0.15) 0px 1px 3px 1px;
+  border-radius: 10px;
+ 
+} 
+.bt1{
+    background-color:rgb(23, 94, 12);
+    color: rgb(228, 231, 252);
+
+}
+.bt2{
+    background-color: white;
+    color: rgb(13, 71, 16);
+
+}
+.div2{
+    width: 100%;
+   min-height: 110vh;
+   background-color: #9bc4e0;
+   margin-top: 10vh;
+}
+.heading1{
+    text-align: center;
+    margin-top: 10vh;
+}
+.heading1 h1{
+    color: #0d4e7a ;
+    font-weight: 500;
+    letter-spacing: .5rem;
+    padding-top: 5vh;
+
+}
+.heading1 p{
+    font-size: 1.5rem;
+}
+.image2{
+    width: 45vw;
+    height: 60vh;
+    margin-left: 2rem;
+    margin-top: 4rem;
+    object-fit: cover;
+
+}
+.content2{
+    width: 45vw;
+    height: 60vh;
+    margin-left: 4rem;
+    margin-top: 4rem;
+}
+.content2 p{
+    line-height:2rem;
+    font-weight: 400;
+    font-style: italic;
+
+}
+
+.a1{
+    display: flex;
+
+}
+.bt3{
+    width: 6rem;
+    height: 2rem;
+margin-left: 3rem; 
+   color: white;
+   border-color: rgb(38, 102, 251);
+   font-weight: 600;
+   background-color:#0d4e7a ;
+   
+}
+form{
+    border: solid 1px;
+    border-color: rgb(88, 10, 244);
+    background-color: white;
+    box-shadow: rgba(226, 232, 237, 0.3) 0px 1px 2px 0px, rgba(30, 153, 247, 0.15) 0px 1px 3px 1px;
+
+}

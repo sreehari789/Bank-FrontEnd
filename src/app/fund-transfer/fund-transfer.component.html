@@ -1,0 +1,66 @@
+<!-- <app-header></app-header> -->
+<nav id="n1" class="navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/Dashboard">ONLINE BANKING APP</a>
+  
+           
+    <a class="nav-link disabled" href="#">Disabled</a>
+    <a class="nav-link disabled" href="#">Disabled</a>
+  
+    <button class="userButton">
+      <i style="color: rgb(246, 246, 242);" class="fa-solid fa-user m-2"></i>
+      <span class="userName">{{user}}</span>
+      <i class="fa-solid fa-chevron-down text-light p-1"></i>
+  
+    </button>
+   
+  </div>
+  
+  </nav>
+
+
+<div class="container">
+    
+        <h1 class="text-dark mt-5 text-center">FUND-TRANSFER</h1>
+      <div class="row mt-5">
+        
+         <div class="col-6 p-4">
+            <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae inventore maiores nobis voluptate omnis delectus, laborum, provident explicabo repellendus veniam minima, praesentium ipsam! Tempore, cum. In quibusdam et laudantium totam.
+          Nemo voluptate molestias hic facilis unde asperiores soluta id ducimus? Mollitia, voluptatum. Explicabo porro id aspernatur veritatis. Officia labore ea velit eveniet cum earum porro, voluptatem magni, recusandae dicta possimus?
+          Repellendus consequatur perferendis voluptatum tempora voluptate consectetur voluptatibus dolor facere dignissimos repellat? Aliquam impedit sequi voluptate eveniet enim, animi hic maxime eos! Itaque, cumque odit corrupti ab quibusdam accusantium laudantium.
+          Sed omnis eligendi cum, deleniti optio quis. Dolore impedit eveniet beatae omnis asperiores, eius consequatur vitae. Tempora molestias accusantium illum mollitia, nam debitis expedita incidunt veniam cupiditate esse explicabo animi.</p>
+        </div>
+        <div id="register" class="col-6 p-4">
+              <form [formGroup]="fundTransferForm">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Credit Account Number</label>
+                    <input name="acn" formControlName="toAcno" type="text"  autocomplete="off" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div *ngIf="this.fundTransferForm.get('toAcno')?.errors&&this.fundTransferForm.get('toAcno')?.touched" class="text-danger mb-4" >Invalid Account Number</div>
+
+      
+                  </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Profile Password</label>
+                      <input name="pass" formControlName="pswd" type="password" class="form-control" id="exampleInputPassword1">
+                      <div *ngIf="this.fundTransferForm.get('pswd')?.errors&&this.fundTransferForm.get('pswd')?.touched" class="text-danger mb-2" >Invalid Password</div>
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Amount</label>
+                        <input name="amt" formControlName="amount" type="text"  autocomplete="off" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div *ngIf="this.fundTransferForm.get('amount')?.errors&&this.fundTransferForm.get('amount')?.touched" class="text-danger mb-2" >Invalid Password</div>
+
+                      </div>
+                      <div style="height: 25px;" class="text-success">{{ fundTransferSuccessMsg}}</div>
+                      <div style="height: 25px;" class="text-danger">{{ fundTransferErrorMsg}}</div>
+
+                    
+                  <button (click)=" transfer()" type="submit" class="btn btn-primary m-2"><i class="fa-solid fa-indian-rupee-sign"></i> Transfer</button>
+                  <button (click)="clearfundTransfer()" type="button" routerLink="/Dashboard" class="btn btn-primary m-2">Back</button>
+
+                </form>
+
+</div>
+</div>
+</div>

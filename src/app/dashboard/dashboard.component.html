@@ -1,0 +1,144 @@
+
+<div>
+    <nav id="n1" class="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" routerLink="/Dashboard">ONLINE BANKING APP</a>
+
+         <div class="aTag">
+           
+              <a class="nav-link disabled">Disabled</a>
+              <a class="nav-link disabled">Disabled</a>
+              <a class="nav-link disabled">Disabled</a>
+         </div>
+         
+
+          <button id="button" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <i style="color: rgb(237, 237, 224);" class="fa-solid fa-user m-2"></i>
+            <span class="userName">{{user}}</span>
+            <i class="fa-solid fa-bars text-warning m-2"></i>
+          </button>
+
+         
+
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div id="mainNav" class="offcanvas-header">
+           <a routerLink="/Dashboard"> <img src="https://www.pngitem.com/pimgs/m/101-1016890_icon-bank-logo-png-transparent-png.png" alt="" width="45" height="45" class="d-inline-block align-text-top m-1">  </a>     
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 ">
+                <li class="nav-item">
+                  <i style="color: white;" class="fa-solid fa-indian-rupee-sign"></i><a class="nav-link active text-light"  data-bs-toggle="offcanvas" href="#offcanvasDeposit">DEPOSIT</a>
+                </li>
+                <li class="nav-item">
+                  <i style="color: white;" class="fa-solid fa-wallet"></i> <a class="nav-link active text-light" (click)="getBalance()" data-bs-toggle="offcanvas" href="#offcanvasExample" >BALANCE ENQUIRY</a>
+                </li>
+                <li class="nav-item">
+                  <i style="color: white;" class="fa-solid fa-money-bill-transfer"></i><a class="nav-link active text-light" routerLink="/fundTransfer">FUND TRANSFER</a>
+                </li>
+                <li class="nav-item">
+                  <i style="color: white;" class="fa-regular fa-clipboard"></i> <a class="nav-link active text-light" routerLink="/MiniStatement">MINI STATEMENT</a>
+                </li>
+                <li class="nav-item">
+                  <i style="color: white;" class="fa-solid fa-right-from-bracket"></i> <a (click)="logout()" class="nav-link active text-light" data-bs-dismiss="offcanvas" aria-current="page">LOGOUT</a>
+                </li>
+                <li class="nav-item">
+                  <i style="color: red;" class="fa-solid fa-trash"></i> <a (click)="deleteAccountFromNavBar()" class="nav-link active text-danger"  data-bs-dismiss="offcanvas">DELETE ACCOUNT</a>
+                </li>
+               
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+      </nav>
+</div>
+
+<app-delete-confirm (onDelete)="onDelete($event)" (onCancel)="onCancel()" [item]="acno"></app-delete-confirm>
+
+<div *ngIf="DeleteSpinner" class="loader"  >
+  <img class="logimg" src="https://cdn.dribbble.com/users/1914549/screenshots/5346994/day21.gif" alt="">
+</div>
+
+<div *ngIf="logoutDiv" class="loader"  >
+  <img class="logimg" src="https://gifs.eco.br/wp-content/uploads/2022/08/gifs-de-logout-0.gif" alt="">
+</div>
+
+<div  *ngIf="!logoutDiv" class="container mt-5">
+<div *ngIf="!confirmMsg">
+  <h3 class="text-left">WELCOME <b><span class="text-primary h1">{{user}}</span></b></h3>  
+  
+  <div id="a1" class="row mt-5">
+         <div class="col-lg-5">
+          <label style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, sunt odio voluptatibus ea consectetur recusandae veritatis accusamus a illum perferendis odit ad temporibus placeat dolorem. Fugiat eligendi minima consequuntur ducimus.</label>
+            <div style="text-align: justify;" class="collapse" id="collapseExample">
+          
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur itaque suscipit voluptatem cumque accusamus? Dolorum illum aliquid, rem eveniet dolor reiciendis, repellat quia accusantium, numquam eos pariatur? Placeat, ab consectetur!
+                Consectetur sint animi minima inventore nemo quod incidunt provident molestias quis, tempora enim nesciunt perspiciatis mollitia et doloribus, eveniet dicta itaque cum quidem. Ab possimus, porro aperiam fugit minus nostrum!
+             
+            </div>
+    
+            <button (click)="collapse()" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            READ <span *ngIf="isCollapse">MORE</span>
+            <span *ngIf="!isCollapse">LESS</span>
+           
+            </button>
+  
+         </div>
+  
+         <div class="col-lg-7">
+          <img style="width: 100%; mix-blend-mode:darken;" src="https://www.pngitem.com/pimgs/m/522-5225085_grow-money-hd-png-download.png" alt="">
+   </div>
+  
+  
+  
+  </div>
+</div>
+
+<!-- offcanvas balance enquiry -->
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div id="BalaceNav" class="offcanvas-header">
+    <i data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" class="fa-solid fa-arrow-left-long btn btn-light"></i>    
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">BALANCE ENQUIRY</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body text-light">
+    <h5>Dear <b>{{user}}</b>,</h5>
+    <h3>Your current Account Balance is <b>{{balance}}</b> </h3>
+  
+  </div>
+</div>
+
+
+<!-- offcanvas Deposit -->
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasDeposit" aria-labelledby="offcanvasExampleLabel">
+  <div id="DepositNav" class="offcanvas-header">
+    <i data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" class="fa-solid fa-arrow-left-long btn btn-light"></i>    
+    <h5 class="offcanvas-title text-light" id="offcanvasExampleLabel">DEPOSIT FORM</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body text-light mt-4">
+    <h5>Dear <b>{{user}}</b>,</h5>
+
+    <div class="m-4">
+{{depositMsg}}
+    </div>
+
+  <form (ngSubmit)="deposit()" [formGroup]="depositForm" action="">
+    <input name="amount" type="text" formControlName="amount" class="form-control" placeholder="Enter Amount">
+<!-- invalid amount -->
+    <div *ngIf="this.depositForm.get('amount')?.errors&&this.depositForm.get('amount')?.touched" class="text-warning" >Invalid Amount</div>
+    <button (click)="showconfetti($event.target)" class="m-2 mt-4 btn btn-light">Deposit</button>
+  </form>
+  </div>
+
+  
+</div>
+
+
+  
+
+
+  

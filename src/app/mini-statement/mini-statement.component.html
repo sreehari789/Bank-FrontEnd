@@ -1,0 +1,62 @@
+<nav id="n1" class="navbar">
+<div class="container-fluid">
+  <a class="navbar-brand" routerLink="/Dashboard">ONLINE BANKING APP</a>
+
+         
+  <a class="nav-link disabled" href="#">Disabled</a>
+  <a class="nav-link disabled" href="#">Disabled</a>
+
+  <button class="userButton">
+    <i style="color: rgb(246, 246, 242);" class="fa-solid fa-user m-2"></i>
+    <span class="userName">{{user}}</span>
+    <i class="fa-solid fa-chevron-down text-light p-1"></i>
+
+  </button>
+
+</div>
+
+</nav>
+
+<div class="p-4">
+  <div class="statement" >
+    <h1>TRANSACTIONS</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis consectetur incidunt unde deleniti! Unde rerum officia modi nostrum odio adipisci alias delectus possimus repellendus laudantium libero aliquid, sed quo temporibus?
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe omnis, modi recusandae illum maiores neque id sapiente delectus tempora quibusdam eligendi autem, fuga, excepturi magni a. Autem alias quos blanditiis!
+      Velit fugiat recusandae eaque assumenda accusamus ab quas minima fuga aliquid enim, culpa molestias omnis eos quae dicta consequatur illum mollitia ut neque facilis ducimus nisi hic sapiente nulla. Maiores.
+    </p>
+  
+  </div>
+  
+  <div class="statementTable">
+    <div class="export">
+      <h3 class="text-success">Transaction History</h3>
+  <label for="search">Search by:</label>
+  <input (keyup)="search($event)" id="search" type="text">
+  <button (click)=" generatePdf()" class="text-light">Export</button>
+    </div>
+  </div>
+  
+   <div class="tablediv">
+      <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">NO</th>
+              <th scope="col">Transaction Type</th>
+              <th scope="col">From Account</th>
+              <th scope="col">To Account</th>
+              <th scope="col">Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let transaction of allTransactions | filter:searchKey: 'type' ; let i= index">
+              <th>{{i+1}}</th>
+              <th>{{transaction.type}}</th>
+              <th>{{transaction.fromAcno}}</th>
+              <th>{{transaction.toAcno}}</th>
+              <th> <i class="fa-solid fa-indian-rupee-sign"></i> {{transaction.amount}}</th>
+            </tr>
+           </tbody>
+        </table>
+   </div>
+
+</div>div 
